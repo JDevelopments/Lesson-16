@@ -1,276 +1,182 @@
-@font-face {
-   font-family: "Lato";
-   src: url("../fonts/Lato/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato/Lato-Regular.woff") format("woff");
-   font-weight: 400;
-   font-style: normal;
-   font-display: swap;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-@font-face {
-   font-family: "Lato";
-   src: url("../fonts/Lato/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato/Lato-Bold.woff") format("woff");
-   font-weight: 700;
-   font-style: normal;
-   font-display: swap;
-}
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Lesson 16</title>
+</head>
 
-@font-face {
-   font-family: "Lato";
-   src: url("../fonts/Lato/Lato-Black.woff2") format("woff2"), url("../fonts/Lato/Lato-Black.woff") format("woff");
-   font-weight: 900;
-   font-style: normal;
-   font-display: swap;
-}
+<body class="page">
+   <header class="header"></header>
 
-.page {
-   position: relative;
 
-   font-family: "Lato";
 
-   display: flex;
-   flex-direction: column;
-}
 
-.page .main {
-   flex-grow: 1;
-}
+   <main class="main">
 
-[class*="container"] {
-   max-width: 1230px;
-   margin: 0 auto;
-   min-width: 600px;
-}
+      <div class="response">
+         <div class="response__container ">
 
-.response__container {
-   margin-top: 100px;
-   display: flex;
-   column-gap: 90px;
-}
+            <div class="response__img">
+               <img src="img/content/illustration.svg" alt="Ilustration">
+            </div>
 
-.response__img {
-   flex: 0 1 435px;
-   align-self: center;
-}
-.response__img img {
-   width: 100%;
-}
+            <div class="response__action-box">
+               <form class="response__actions-form">
+                  <div class="response__title title element">
+                     <p class="title__subtitle"> Any questions? </p>
+                     <p class="title__text"> Drop us a line </p>
+                  </div>
 
-.response__action-box {
-   overflow: hidden;
-   flex: 0 1 705px;
-}
+                  <div class="first-name input-box element">
+                     <label class="input-box__label" for="first-name-id">First Name*</label>
+                     <input class="input-box__input" type="text" name="first-name" id="first-name-id" required
+                        autocomplete="off" placeholder="Your first name" tabindex="1">
+                  </div>
 
-.response__actions-form {
-   /*  Тут емітація %ки + Gap 1/2 */
-   margin: 0 -12.5px;
+                  <div class="last__name input-box element">
+                     <label class="input-box__label" for="last-name-id">Last Name*</label>
+                     <input class="input-box__input" type="text" name="last-name" id="last-name-id" required
+                        autocomplete="off" placeholder="Your last name" tabindex="2">
+                  </div>
 
-   display: flex;
-   row-gap: 24px;
-   flex-wrap: wrap;
-   align-content: flex-start;
-}
-.response__actions-form .element {
-   /*  Тут емітація %ки + Gap 2/2 */
-   padding: 0 12.5px;
-}
+                  <div class="email input-box element">
+                     <label class="input-box__label" for="email-id">Email*</label>
+                     <input class="input-box__input" type="email" name="email" id="email-id" required autocomplete="off"
+                        placeholder="Your working email" tabindex="3">
+                  </div>
 
-.response__title {
-   margin-bottom: 16px;
-   flex: 0 1 100%;
-}
-.title {
-   color: #1e212c;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   gap: 8px;
-}
-.title__subtitle {
-   font-weight: 700;
-   line-height: 150%;
-   letter-spacing: 1px;
-   text-transform: uppercase;
-}
-.title__text {
-   font-weight: 900;
-   font-size: 46px;
-   line-height: 130%;
-   min-width: 170px;
-}
+                  <div class="phone input-box element">
+                     <label class="input-box__label" for="phone-id">Phone</label>
+                     <input class="input-box__input" type="number" name="phone" id="phone-id" autocomplete="off"
+                        placeholder="Your phone number" tabindex="4">
+                  </div>
 
-.input-box {
-   flex: 0 1 50%;
-   display: flex;
-   flex-direction: column;
-   row-gap: 8px;
+                  <div class="message input-box element">
+                     <label class="input-box__label" for="message-id">Message*</label>
+                     <textarea class="input-box__input" name="message" id="message-id" autocomplete="off"
+                        placeholder="Your message" required tabindex="5"></textarea>
+                  </div>
 
-   color: #424551;
-   min-width: 170px;
-}
-.input-box__label {
-   line-height: 160%;
-}
-.input-box__input {
-   font-family: inherit;
-   color: inherit;
-   padding: 13px 16px;
-   border: 1px solid #d7dadd;
-   border-radius: 4px;
-}
-.input-box__input::placeholder {
-   color: #9a9ca5;
-}
-.input-box__input:focus,
-.akcept-box__label:focus::before {
-   outline: none;
-   border: 1px solid rgba(255, 63, 58, 0.4);
-   box-shadow: 0px 80px 80px -20px rgba(255, 63, 58, 0.08), 0px 30px 24px -10px rgba(255, 63, 58, 0.05),
-      0px 12px 10px -6px rgba(255, 63, 58, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
-}
+                  <div class="akcept-box element">
+                     <input class="akcept-box__checkbox" type="checkbox" name="akcept" id="akcept-id">
+                     <label class="akcept-box__label" for="akcept-id" tabindex="6"> I agree to receive communications
+                        from Createx
+                        Online School </label>
+                     <button class="akcept-box_button button" type="submit" tabindex="7">Send message</button>
+                  </div>
+               </form>
+            </div>
 
-.message {
-   flex: 1 1 100%;
-}
-.message .input-box__input {
-   height: 128px;
-   resize: none;
-}
+         </div>
 
-.akcept-box {
-   /*  Щоб checkbox не полетів далеко  */
-   position: relative;
-   margin-top: 24px;
-   flex: 1 1 100%;
+         <div class="practic">
+            <div class="practic__container">
+               <form class="practic__form" method="POST" action="https://jsonplaceholder.typicode.com/posts">
 
-   display: flex;
-   flex-wrap: wrap;
-   row-gap: 24px;
-}
+                  <div class="practic__input component">
+                     <label class="component__label" for="password-id">Password</label>
+                     <input class="component__input" type="password" name="password" id="password-id" autocomplete="off"
+                        placeholder="Your password" tabindex="8">
+                  </div>
 
-.akcept-box__label:focus {
-   outline: none;
-   text-decoration: underline;
-}
+                  <div class="practic__input component">
+                     <label class="component__label" for="color-id">Color</label>
+                     <input class="component__input" type="color" name="color" id="color-id" value="#3FB0B4"
+                        tabindex="9">
+                  </div>
 
-.akcept-box__checkbox {
-   position: absolute;
-   height: 0px;
-   width: 0px;
-   opacity: 0;
-}
-.akcept-box__label {
-   line-height: 160%;
-   color: #424551;
-   cursor: pointer;
-   padding-right: 50px;
-   flex: 0 0 365px;
+                  <div class="practic__input component">
+                     <label class="component__label" for="search-id">Find</label>
+                     <input class="component__input" type="search" name=" search" id="search-id" placeholder="Пошук"
+                        tabindex="10">
+                  </div>
 
-   display: inline-flex;
-   gap: 12px;
-}
-.akcept-box__label::before {
-   content: "";
-   height: 16px;
-   border: 1px solid #b3b7bc;
-   border-radius: 3px;
-   margin-top: 6px;
-   flex: 0 0 16px;
-}
+                  <div class="practic__input component">
+                     <label class="component__label" for="file-id">Open file</label>
+                     <input class="component__input" type="file" name="file" accept=".html, .css, .js" id="file-id"
+                        tabindex="11" multiple>
+                  </div>
 
-.akcept-box__checkbox:checked + .akcept-box__label::before {
-   background: #f75e05 url("../img/ico/check.svg") center no-repeat;
-   border: none;
-}
+                  <div class="practic__input component">
+                     <label class="component__label" for="volume-id">Volume</label>
+                     <input class="component__input" type="range" name="volume" id="volume-id" tabindex="12"></input>
+                  </div>
 
-.akcept-box_button {
-   flex: 0 1 340px;
-   white-space: nowrap;
-}
+                  <div class="checkbox__skils skils">
+                     <label class="skils__label">Skils</label>
+                     <div class="skils__box">
+                        <div class="skils__item">
+                           <label for="html-skils-id">HTML</label>
+                           <input class="skils__input" type="checkbox" name="html-skils" id="html-skils-id"
+                              tabindex="13">
+                        </div>
+                        <div class="skils__item">
+                           <label for="css-skils-id">CSS</label>
+                           <input class="skils__input" type="checkbox" name="css-skils" id="css-skils-id" tabindex="14">
+                        </div>
+                        <div class="skils__item">
+                           <label for="js-skils-id">JS</label>
+                           <input class="skils__input" type="checkbox" name="js-skils" id="js-skils-id" tabindex="15">
+                        </div>
+                     </div>
+                  </div>
 
-.button {
-   background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
-   font-weight: 700;
-   color: white;
-   border-radius: 4px;
-   letter-spacing: 0.5px;
-   line-height: 1.25;
-   padding: 16px;
-   align-content: center;
-   align-self: flex-start;
-}
-.button:hover {
-   background: linear-gradient(55.95deg, #f75e05 0%, #ff3f3a 100%);
-}
-.button:focus {
-   outline: none;
-}
+                  <div class="radio__skils skils">
+                     <label class="skils__label">Skil</label>
+                     <div class="skils__box">
 
-/* --------------- PRACTIC----------------- */
+                        <div class="skils__item">
+                           <label for="html-skil-id">HTML</label>
+                           <input class="skils__input" type="radio" name="skil" value="html" id="html-skil-id"
+                              tabindex="16">
+                        </div>
+                        <div class="skils__item">
+                           <label for="css-skil-id">CSS</label>
+                           <input class="skils__input" type="radio" name="skil" value="css" id="css-skil-id"
+                              tabindex="17">
+                        </div>
+                        <div class="skils__item">
+                           <label for="js-skil-id">JS</label>
+                           <input class="skils__input" type="radio" name="skil" value="js" id="js-skil-id"
+                              tabindex="18">
+                        </div>
 
-.practic {
-   margin-top: 100px;
-}
+                     </div>
+                  </div>
 
-.practic__form {
-   display: flex;
-   justify-content: center;
-   gap: 25px;
-   flex-wrap: wrap;
-}
+                  <div class="practic__input component">
+                     <label class="component__label" for="select-id">Select skil</label>
+                     <select class="component__input" name="select" id="select-id" tabindex="19">
+                        <option value="html">HTML</option>
+                        <option selected value="css">CSS</option>
+                        <option value="js">JS</option>
+                     </select>
+                  </div>
 
-.component {
-   padding: 5px;
-   display: flex;
-   flex-direction: column;
-   gap: 8px;
-   flex: 0 0 280px;
-}
+                  <div class="button-panel">
+                     <button class="button" type="reset">Reset</button>
+                     <button class="button" type="submit">Submit</button>
+                  </div>
 
-.component__input {
-   border: 1px solid #d7dadd;
-   border-radius: 4px;
-   width: 100%;
-   padding: 5px;
+               </form>
+            </div>
+         </div>
 
-   flex: 0 0 40px;
-}
+      </div>
 
-.component__input:focus {
-   outline: none;
-}
+   </main>
 
-/* CheckBox */
-.skils {
-   padding: 5px;
-   display: flex;
-   flex: 0 0 280px;
-   flex-direction: column;
-   row-gap: 8px;
-}
-.skils__box {
-   border: 1px solid #d7dadd;
-   flex: 0 0 40px;
 
-   display: flex;
-   justify-content: space-evenly;
-   align-items: center;
-}
-.skils__input {
-}
 
-.skils__item label {
-   cursor: pointer;
-}
 
-.button-panel {
-   margin-bottom: 100px;
 
-   flex: 1 1 100%;
-   display: flex;
-   gap: 25px;
-   justify-content: center;
-}
+   <footer class="footer"></footer>
 
-.button-panel .button {
-   flex: 0 0 170px;
-}
+</body>
+
+</html>
