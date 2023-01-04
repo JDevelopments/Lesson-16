@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Lesson 16</title>
+</head>
+
+<body class="page">
+   <header class="header"></header>
+
+
+
+
+   <main class="main">
+
+      <div class="response">
+         <div class="response__container ">
+
+            <div class="response__img">
+               <img src="img/content/illustration.svg" alt="Ilustration">
+            </div>
+
+            <div class="response__action-box">
+               <form class="response__actions-form">
+                  <div class="response__title title element">
+                     <p class="title__subtitle"> Any questions? </p>
+                     <p class="title__text"> Drop us a line </p>
+                  </div>
+
+                  <div class="first-name input-box element">
+                     <label class="input-box__label" for="first-name-id">First Name*</label>
+                     <input class="input-box__input" type="text" name="first-name" id="first-name-id" required
+                        autocomplete="off" placeholder="Your first name" tabindex="1">
+                  </div>
+
+                  <div class="last__name input-box element">
+                     <label class="input-box__label" for="last-name-id">Last Name*</label>
+                     <input class="input-box__input" type="text" name="last-name" id="last-name-id" required
+                        autocomplete="off" placeholder="Your last name" tabindex="2">
+                  </div>
+
+                  <div class="email input-box element">
+                     <label class="input-box__label" for="email-id">Email*</label>
+                     <input class="input-box__input" type="email" name="email" id="email-id" required autocomplete="off"
+                        placeholder="Your working email" tabindex="3">
+                  </div>
+
+                  <div class="phone input-box element">
+                     <label class="input-box__label" for="phone-id">Phone</label>
+                     <input class="input-box__input" type="number" name="phone" id="phone-id" autocomplete="off"
+                        placeholder="Your phone number" tabindex="4">
+                  </div>
+
+                  <div class="message input-box element">
+                     <label class="input-box__label" for="message-id">Message*</label>
+                     <textarea class="input-box__input" type="number" name="message" id="message-id" autocomplete="off"
+                        placeholder="Your message" required tabindex="5"></textarea>
+                  </div>
+
+                  <div class="akcept-box element">
+                     <input class="akcept-box__checkbox" type="checkbox" name="akcept" id="akcept-id">
+                     <label class="akcept-box__label" for="akcept-id" tabindex="6"> I agree to receive communications
+                        from Createx
+                        Online School </label>
+                     <button class="akcept-box_button button" type="submit" tabindex="7">Send message</button>
+                  </div>
+               </form>
+            </div>
+
+         </div>
+
+         <div class="practic">
+            <div class="practic__container">
+               <form class="practic__form" method="POST" action="https://jsonplaceholder.typicode.com/posts">
+
+                  <div class="practic__input component">
+                     <label class="component__label" for="password-id">Password</label>
+                     <input class="component__input" type="password" name="password" id="password-id" autocomplete="off"
+                        placeholder="Your password" tabindex="8"></input>
+                  </div>
+
+                  <div class="practic__input component">
+                     <label class="component__label" for="color-id">Color</label>
+                     <input class="component__input" type="color" name="color" id="color-id" value="#3FB0B4"
+                        tabindex="9"></input>
+                  </div>
+
+                  <div class="practic__input component">
+                     <label class="component__label" for="search-id">Find</label>
+                     <input class="component__input" type="search" name=" search" id=" search-id" placeholder="Пошук"
+                        tabindex="10"></input>
+                  </div>
+
+                  <div class="practic__input component">
+                     <label class="component__label" for="file-id">Open file</label>
+                     <input class="component__input" type="file" name="file" accept=".html, .css, .js" id="file-id"
+                        tabindex="11" multiple></input>
+                  </div>
+
+                  <div class="practic__input component">
+                     <label class="component__label" for="volume-id">Volume</label>
+                     <input class="component__input" type="range" name="volume" id="volume-id" tabindex="12"></input>
+                  </div>
+
+                  <div class="checkbox__skils skils">
+                     <label class="skils__label">Skils</label>
+                     <div class="skils__box">
+                        <div class="skils__item">
+                           <label for="html-skils-id">HTML</label>
+                           <input class="skils__input" type="checkbox" name="html-skils" id="html-skils-id"
+                              tabindex="13">
+                        </div>
+                        <div class="skils__item">
+                           <label for="css-skils-id">CSS</label>
+                           <input class="skils__input" type="checkbox" name="css-skils" id="css-skils-id" tabindex="14">
+                        </div>
+                        <div class="skils__item">
+                           <label for="js-skils-id">JS</label>
+                           <input class="skils__input" type="checkbox" name="js-skils" id="js-skils-id" tabindex="15">
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="radio__skils skils">
+                     <label class="skils__label">Skil</label>
+                     <div class="skils__box">
+
+                        <div class="skils__item">
+                           <label for="html-skil-id">HTML</label>
+                           <input class="skils__input" type="radio" name="skil" value="html" id="html-skil-id"
+                              tabindex="16">
+                        </div>
+                        <div class="skils__item">
+                           <label for="css-skil-id">CSS</label>
+                           <input class="skils__input" type="radio" name="skil" value="css" id="css-skil-id"
+                              tabindex="17">
+                        </div>
+                        <div class="skils__item">
+                           <label for="js-skil-id">JS</label>
+                           <input class="skils__input" type="radio" name="skil" value="js" id="js-skil-id"
+                              tabindex="18">
+                        </div>
+
+                     </div>
+                  </div>
+
+                  <div class="practic__input component">
+                     <label class="component__label" for="select-id">Select skil</label>
+                     <select class="component__input" name="select" id="select-id" tabindex="19">
+                        <option value="html">HTML</option>
+                        <option selected value="css">CSS</option>
+                        <option value="js">JS</option>
+                     </select>
+                  </div>
+
+                  <div class="button-panel">
+                     <button class="button" type="reset">Reset</button>
+                     <button class="button" type="submit">Submit</button>
+                  </div>
+
+               </form>
+            </div>
+         </div>
+
+      </div>
+
+   </main>
+
+
+
+
+
+   <footer class="footer"></footer>
+
+</body>
+
+</html>
